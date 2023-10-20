@@ -94,16 +94,5 @@ public class ControllerExceptionHandler {
     	LOGGER.error("Error en la ejecucion del servicio de Empleado", ex);
 		return new ResponseEntity<DefaultErrorList>(new DefaultErrorList(new DefaultError(ErrorEnum.EXC_OPER_NO_EXITOSA)), HttpStatus.INTERNAL_SERVER_ERROR);
     }
-    
-//	/**
-//	 * Manejo de excepcion generica
-//	 * @param ex Excepcion generica de tipo Exception
-//	 * @return La entidad de respuesta que maneja el error como objeto
-//	 */
-//    @ExceptionHandler(Exception.class)
-//    public ResponseEntity<DefaultErrorList> handleGenericException(Exception ex) {
-//		LOGGER.error("Error en la ejecucion", ex);
-//		return new ResponseEntity<DefaultErrorList>(new DefaultErrorList(new DefaultError(ErrorEnum.EXC_GENERICO)), HttpStatus.INTERNAL_SERVER_ERROR);
-//    }
 
 }

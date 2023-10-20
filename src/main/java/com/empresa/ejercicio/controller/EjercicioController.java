@@ -71,18 +71,6 @@ public class EjercicioController {
 	public ResponseEntity<Void> guardarEmpleados(@Valid @RequestBody List<Empleado> empleados, BindingResult result){
 		LOGGER.info("<guardarEmpleados controller>");
 		
-//		List<String> errores= new ArrayList<String>();
-//		//Validacion de los campos
-//		if(result.hasErrors()) {
-//			List<ObjectError> listError = result.getAllErrors();
-//			for (ObjectError object : listError) {
-//				errores.add(object.getDefaultMessage());
-//				LOGGER.error("Validacion incorrecta: {}", object.getDefaultMessage());
-//			}
-//			
-//			return ResponseEntity.badRequest().build();
-//		}
-		
 		if(empleados!= null && !empleados.isEmpty()) {
 			empleadosService.guardaEmpleados(empleados);
 			LOGGER.info("</guardarEmpleados controller>");
